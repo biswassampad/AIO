@@ -1,0 +1,22 @@
+#this is a comment
+
+PRINT("Greetings Universe !!")
+
+FUN concat(prefix) -> prefix + " done !"
+
+FUN join(elements, separator)
+	VAR result = ""
+	VAR len = LEN(elements)
+
+	FOR i = 0 TO len THEN
+		VAR result = result + elements/i
+		IF i != len - 1 THEN VAR result = result + separator
+	END
+
+	RETURN result
+END
+
+FOR i = 0 TO 5 THEN
+    PRINT(concat("Breakfast"))
+    PRINT(concat("Lunch"))
+END
